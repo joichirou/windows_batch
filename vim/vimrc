@@ -1,0 +1,10 @@
+set number
+syntax on
+colorscheme industry
+".vim/colors/*.vimにあるファイルの設定
+"colorscheme blues
+"拡張子別に定義する
+filetype plugin indent on
+autocmd BufRead,BufNewFile *.py setfiletype hello_python
+autocmd BufRead,BufNewFile *.psp setfiletype psp
+
