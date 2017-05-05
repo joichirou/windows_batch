@@ -1,10 +1,33 @@
 set number
-syntax on
-colorscheme industry
 ".vim/colors/*.vimにあるファイルの設定
 "colorscheme blues
-"拡張子別に定義する
+
+"----------------------
+" plugin setting
+"----------------------
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+execute 'set runtimepath^=' . s:dein_repo_dir
+
+call dein#begin(s:dein_dir)
+call dein#add('Shougo/Unite.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#end()
+
 filetype plugin indent on
+syntax enable
+colorscheme industry
+syntax on
+
+"----------------------
+"拡張子別に定義する
+"----------------------
 autocmd BufRead,BufNewFile *.py setfiletype hello_python
 autocmd BufRead,BufNewFile *.psp setfiletype psp
+
+"----------------------
+" key mapping
+"----------------------
+noremap <silent><C-n> :NERDTreeToggle<CR>
 
