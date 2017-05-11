@@ -2,7 +2,7 @@
 '定数定義
 '--------------------------
 'exeのpathを記載してください
-Const exe_file = """C:\Program Files (x86)\teraterm\ttermpro.exe"""
+Const exe_file = """hogehoge.exe"""
 
 '--------------------------
 'デフォルト設定
