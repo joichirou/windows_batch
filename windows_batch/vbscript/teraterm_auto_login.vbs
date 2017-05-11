@@ -12,6 +12,10 @@ host   = ""
 user   = ""
 passwd = ""
 
+
+'--------------------------
+'コマンド引数のロード
+'--------------------------
 Dim count
 count = WScript.Arguments.Count
 
@@ -51,8 +55,8 @@ Next
 '--------------------------
 'コマンド実行
 '--------------------------
-Dim w_shell
-Set w_shell = CreateObject("WScript.Shell")
-w_shell.run(exe_file & " " & opt_param)
-Set w_shell = Nothing
+Dim wshell
+Set wshell = CreateObject("WScript.Shell")
+wshell.run(exe_file & " " & opt_param)
+Set wshell = Nothing
 
